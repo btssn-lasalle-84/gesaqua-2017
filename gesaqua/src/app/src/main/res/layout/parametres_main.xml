@@ -1,0 +1,226 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/content_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:windowSoftInputMode="stateHidden"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="com.example.cloart.gesaqua.Parametres">
+
+
+    <View
+        android:id="@+id/focus_thief"
+        android:layout_width="1dp"
+        android:layout_height="1dp"
+        android:focusable="true"
+        android:focusableInTouchMode="true" />
+
+    <TextView
+        android:id="@+id/textViewMaxPh"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Max:"
+        android:textSize="4mm"
+        tools:ignore="HardcodedText,InOrMmUsage"
+        tools:text="Max:"
+        android:layout_below="@+id/editTextMinPh"
+        android:layout_alignStart="@+id/textViewMinPh"
+        android:layout_marginTop="22dp" />
+
+    <TextView
+        android:id="@+id/textViewNiveauEauMin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Max:"
+        android:textSize="4mm"
+        tools:ignore="HardcodedText,InOrMmUsage"
+        tools:text="Max:"
+        android:layout_marginTop="92dp"
+        android:layout_below="@+id/textViewSeuilsNiveauEau"
+        android:layout_toStartOf="@+id/editTextMaxPh" />
+
+    <EditText
+        android:id="@+id/editTextMinPh"
+        android:layout_width="40dp"
+        android:layout_height="28dp"
+        android:background="@android:color/transparent"
+        android:inputType="numberDecimal"
+        android:padding="2dp"
+        android:windowSoftInputMode="stateUnchanged"
+        tools:ignore="LabelFor"
+        android:layout_alignBaseline="@+id/textViewMinPh"
+        android:layout_alignBottom="@+id/textViewMinPh"
+        android:layout_alignStart="@+id/editTextMinTemp" />
+
+    <EditText
+        android:id="@+id/editTextNiveauEauMin"
+        android:layout_width="40dp"
+        android:layout_height="28dp"
+        android:background="@android:color/transparent"
+        android:inputType="numberDecimal"
+        android:padding="2dp"
+        android:windowSoftInputMode="stateUnchanged"
+        tools:ignore="LabelFor"
+        android:layout_alignBaseline="@+id/textViewNiveauEauMax"
+        android:layout_alignBottom="@+id/textViewNiveauEauMax"
+        android:layout_alignStart="@+id/editTextMaxTemp" />
+
+    <TextView
+        android:id="@+id/textViewSeuilsTemp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:text="@string/seuils_de_temp_rature"
+        android:textSize="4mm"
+        android:textStyle="bold"
+        tools:ignore="InOrMmUsage,RelativeOverlap" />
+
+    <TextView
+        android:id="@+id/textViewMinPh"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/min"
+        android:textSize="4mm"
+        tools:ignore="InOrMmUsage,UnknownId"
+        android:layout_marginTop="28dp"
+        android:layout_below="@+id/textViewSeuilsPh"
+        android:layout_toEndOf="@+id/focus_thief" />
+
+    <TextView
+        android:id="@+id/textViewNiveauEauMax"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:text="@string/min"
+        android:textSize="4mm"
+        tools:ignore="InOrMmUsage,UnknownId"
+        android:layout_below="@+id/textViewSeuilsNiveauEau"
+        android:layout_alignStart="@+id/textViewNiveauEauMin" />
+
+
+    <TextView
+        android:id="@+id/textViewMinTemp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/min"
+        android:textSize="4mm"
+        tools:ignore="InOrMmUsage,UnknownId"
+        android:layout_below="@+id/buttonValider"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:id="@+id/textViewSeuilsPh"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/textViewMinPh"
+        android:layout_below="@+id/editTextMaxTemp"
+        android:layout_marginTop="40dp"
+        android:text="Seuils de PH :"
+        android:textSize="4mm"
+        android:textStyle="bold"
+        tools:ignore="InOrMmUsage,RelativeOverlap"/>
+
+    <TextView
+        android:id="@+id/textViewSeuilsNiveauEau"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/editTextMaxPh"
+        android:layout_marginTop="37dp"
+        android:text="Seuils de niveau d'eau (cm) :"
+        android:textSize="4mm"
+        android:textStyle="bold"
+        tools:ignore="InOrMmUsage,RelativeOverlap"/>
+
+    <Button
+        android:id="@+id/buttonValider"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Valider"
+        android:onClick="Valider"
+        tools:ignore="HardcodedText,RelativeOverlap"
+        android:layout_alignParentTop="true"
+        android:layout_toStartOf="@+id/buttonRetour"
+        android:layout_marginEnd="27dp" />
+
+    <Button
+        android:id="@+id/buttonRetour"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentTop="true"
+        android:onClick="Retour"
+        android:text="@string/retour"
+        tools:ignore="RelativeOverlap" />
+
+    <TextView
+        android:id="@+id/textViewMaxTemp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Max:"
+        android:textSize="4mm"
+        tools:ignore="HardcodedText,InOrMmUsage"
+        tools:text="Max:"
+        android:layout_alignBaseline="@+id/editTextMaxTemp"
+        android:layout_alignBottom="@+id/editTextMaxTemp"
+        android:layout_alignParentStart="true" />
+
+    <EditText
+        android:id="@+id/editTextMaxTemp"
+        android:layout_height="28dp"
+        android:windowSoftInputMode="stateUnchanged"
+        android:padding="2dp"
+        android:layout_width="40dp"
+        android:inputType="numberDecimal"
+        android:background="@android:color/transparent"
+        tools:ignore="LabelFor"
+        android:layout_marginTop="31dp"
+        android:layout_below="@+id/editTextMinTemp"
+        android:layout_toEndOf="@+id/textViewMaxTemp" />
+
+    <EditText
+        android:id="@+id/editTextMaxPh"
+        android:layout_width="40dp"
+        android:layout_height="28dp"
+        android:background="@android:color/transparent"
+        android:inputType="numberDecimal"
+        android:padding="2dp"
+        android:windowSoftInputMode="stateUnchanged"
+        tools:ignore="LabelFor"
+        android:layout_alignBaseline="@+id/textViewMaxPh"
+        android:layout_alignBottom="@+id/textViewMaxPh"
+        android:layout_toEndOf="@+id/textViewMaxPh" />
+
+    <EditText
+        android:id="@+id/editTextNiveauEauMax"
+        android:layout_width="40dp"
+        android:layout_height="28dp"
+        android:background="@android:color/transparent"
+        android:inputType="numberDecimal"
+        android:padding="2dp"
+        android:windowSoftInputMode="stateUnchanged"
+        tools:ignore="LabelFor"
+        android:layout_alignBaseline="@+id/textViewNiveauEauMin"
+        android:layout_alignBottom="@+id/textViewNiveauEauMin"
+        android:layout_toEndOf="@+id/textViewNiveauEauMin" />
+
+    <EditText
+        android:id="@+id/editTextMinTemp"
+        android:layout_width="40dp"
+        android:layout_height="28dp"
+        android:windowSoftInputMode="stateUnchanged"
+        android:background="@android:color/transparent"
+        android:inputType="numberDecimal"
+        android:padding="2dp"
+        tools:ignore="LabelFor"
+        android:layout_alignBaseline="@+id/textViewMinTemp"
+        android:layout_alignBottom="@+id/textViewMinTemp"
+        android:layout_toEndOf="@+id/textViewMinTemp" />
+</RelativeLayout>

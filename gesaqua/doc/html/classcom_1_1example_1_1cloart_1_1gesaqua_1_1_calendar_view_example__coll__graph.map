@@ -1,0 +1,6 @@
+<map id="G" name="G">
+<area shape="rect" id="node8" href="$classcom_1_1example_1_1cloart_1_1gesaqua_1_1_modes.html" title="Fournit des méthodes pour effectuer des requêtes sur la table &#39;modes&#39; de la base de données Created b..." alt="" coords="344,727,576,899"/>
+<area shape="rect" id="node12" href="$classcom_1_1example_1_1cloart_1_1gesaqua_1_1_ges_aqua_b_d_d.html" title="{com.example.cloart.gesaqua.GesAquaBDD\n|&#45; bdd\l&#45; gesAquaSQLite\l|+ GesAquaBDD()\l+ open()\l+ close()\l+ getBDD()\l}" alt="" coords="416,419,691,573"/>
+<area shape="rect" id="node14" href="$classcom_1_1example_1_1cloart_1_1gesaqua_1_1_ges_aqua_s_q_lite.html" title="classe qui hérite de SQLiteOpenHelper pour définir l’ensemble des tables de la base de données qui se..." alt="" coords="449,6,735,351"/>
+<area shape="rect" id="node21" href="$classcom_1_1example_1_1cloart_1_1gesaqua_1_1_mode.html" title="Représente un tuple dans la table &#39;modes&#39; Created by cloart on 21/04/17." alt="" coords="861,641,1085,986"/>
+</map>

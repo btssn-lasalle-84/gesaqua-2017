@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/scrollView2"
+            android:layout_alignParentTop="true"
+            android:layout_alignEnd="@+id/relativeLayout"
+            android:layout_marginTop="75dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:weightSum="1">
+
+                        <Button
+                            android:id="@+id/retour"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentTop="true"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginTop="12dp"
+                            android:onClick="boutonRetour"
+                            android:text="retour" />
+
+                        <TextView
+                            android:id="@+id/textView8"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Choisir une date"
+                            android:textAppearance="?android:attr/textAppearanceLarge" />
+
+                        <CalendarView
+                            android:id="@+id/calendarView"
+                            android:layout_width="match_parent"
+                            android:layout_height="300dp"
+                            android:layout_marginBottom="16dp"
+                            android:layout_marginTop="16dp" />
+
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="0.23">
+
+                                <TextView
+                                    android:id="@+id/textViewLabel"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center_vertical|center_horizontal"
+                                    android:text="@string/date_label"
+                                    android:textAppearance="?android:attr/textAppearanceMedium"
+                                    android:layout_marginStart="472dp"
+                                    android:layout_alignParentTop="true"
+                                    android:layout_alignParentStart="true" />
+
+
+
+
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="0.23">
+
+                                <TextView
+                                    android:id="@+id/vue_date_fin"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center_vertical|center_horizontal"
+                                    android:text="@string/date_fin_view_set"
+                                    android:textAppearance="?android:attr/textAppearanceMedium"
+                                    android:layout_marginStart="127dp"
+                                    android:layout_alignParentTop="true"
+                                    android:layout_toEndOf="@+id/vue_date_debut" />
+
+                                <TextView
+                                    android:id="@+id/vue_date_debut"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center_vertical|center_horizontal"
+                                    android:text="Date de début:"
+                                    android:textAppearance="?android:attr/textAppearanceMedium"
+                                    android:layout_marginStart="474dp"
+                                    android:layout_alignParentTop="true"
+                                    android:layout_alignParentStart="true" />
+
+                        </RelativeLayout>
+
+                        <TextView
+                            android:id="@+id/textViewDateDebut"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/date_debut_selected"
+                            android:textAppearance="?android:attr/textAppearanceMedium" />
+
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="0.23">
+
+                                <Button
+                                    android:id="@+id/buttonFin"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center_vertical|center_horizontal"
+                                    android:onClick="setDateFin"
+                                    android:text="DATE  DE  FIN"
+                                    android:layout_marginStart="109dp"
+                                    android:layout_alignParentTop="true"
+                                    android:layout_toEndOf="@+id/buttonDebut" />
+
+                                <Button
+                                    android:id="@+id/buttonDebut"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center_vertical|center_horizontal"
+                                    android:onClick="setDateDebut"
+                                    android:text="@string/date_debut_button_set"
+                                    android:layout_marginStart="468dp"
+                                    android:layout_alignParentTop="true"
+                                    android:layout_alignParentStart="true" />
+
+                        </RelativeLayout>
+
+                        <TextView
+                            android:id="@+id/textViewDateFin"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/date_fin_selected"
+                            android:textAppearance="?android:attr/textAppearanceMedium" />
+
+
+                        <Button
+                            android:id="@+id/btnChangeTimeDebut"
+                            android:layout_width="wrap_content"
+                            android:layout_gravity="center_vertical|center_horizontal"
+                            android:layout_height="wrap_content"
+                            android:text="Heure de début" />
+
+                        <TextView
+                            android:id="@+id/lblTimeDebut"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Heure de début (H:M): "
+                            android:layout_gravity="center_vertical|center_horizontal"
+                            android:textAppearance="?android:attr/textAppearanceLarge" />
+
+                        <TextView
+                            android:id="@+id/tvTimeDebut"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text=""
+                            android:textAppearance="?android:attr/textAppearanceLarge" />
+
+                        <TimePicker
+                            android:id="@+id/timePickerDebut"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent" />
+
+                        <Button
+                            android:id="@+id/btnChangeTimeFin"
+                            android:layout_width="wrap_content"
+                            android:layout_gravity="center_vertical|center_horizontal"
+                            android:layout_height="wrap_content"
+                            android:text="Heure de fin" />
+
+                        <TextView
+                            android:id="@+id/lblTimeFin"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Heure de fin(H:M): "
+                            android:layout_gravity="center_vertical|center_horizontal"
+                            android:textAppearance="?android:attr/textAppearanceLarge" />
+
+                        <TextView
+                            android:id="@+id/tvTimeFin"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text=""
+                            android:textAppearance="?android:attr/textAppearanceLarge" />
+
+                        <TimePicker
+                            android:id="@+id/timePickerFin"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent" />
+
+
+                </LinearLayout>
+</ScrollView>
+</LinearLayout>

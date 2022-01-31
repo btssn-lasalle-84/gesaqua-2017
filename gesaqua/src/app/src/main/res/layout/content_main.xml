@@ -1,0 +1,425 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:windowSoftInputMode="stateHidden"
+    android:id="@+id/content_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="com.example.cloart.gesaqua.MainActivity"
+    tools:showIn="@layout/activity_main">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <TextView
+            android:id="@+id/textViewParametres"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:text="@string/param_tres_vitaux"
+            android:textSize="6mm"
+            android:visibility="visible"
+            tools:ignore="InOrMmUsage" />
+
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:ignore="UselessParent"
+        android:id="@+id/scrollView2"
+        android:layout_alignParentTop="true"
+        android:layout_alignEnd="@+id/relativeLayout"
+        android:layout_marginTop="75dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:weightSum="1">
+
+            <View
+                android:id="@+id/focus_thief"
+                android:layout_width="1dp"
+                android:layout_height="1dp"
+                android:focusable="true"
+                android:focusableInTouchMode="true" />
+
+            <TextView
+                android:id="@+id/textViewTemperature"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/textViewParametres"
+                android:text="@string/temperature"
+                android:textSize="4mm"
+                tools:ignore="InOrMmUsage" />
+
+            <TextView
+                android:id="@+id/textViewPH"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/ph_de_l_eau"
+                android:textSize="4mm"
+                tools:ignore="InOrMmUsage"/>
+
+            <TextView
+                android:id="@+id/textViewNiveauEau"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="15dp"
+
+                android:layout_marginTop="10dp"
+                android:text="@string/niveau_de_l_eau"
+                android:textSize="4mm"
+                tools:ignore="InOrMmUsage"/>
+
+            <TextView
+                android:id="@+id/textViewModes"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/modes_fonctionnement"
+                android:textSize="6mm"
+                tools:ignore="InOrMmUsage"/>
+
+            <Switch
+                android:id="@+id/switchAuto"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:elegantTextHeight="true"
+                android:text="Mode Auto"
+                android:textSize="3mm"
+                tools:ignore="HardcodedText,UnusedAttribute"/>
+
+            <CheckBox
+                android:id="@+id/checkBoxAlarmes"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="15dp"
+                android:layout_marginTop="10dp"
+                android:elegantTextHeight="true"
+                android:onClick="onCheckboxClicked"
+                android:text="@string/alarmes"
+                android:textSize="3mm"/>
+
+
+
+
+            <RelativeLayout
+                android:id="@+id/relativeLayoutConsignes"
+                android:layout_width="327dp"
+                android:layout_height="300dp"
+                android:layout_weight="1.04">
+                <TextView
+                    android:id="@+id/textViewTemp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Température: "
+                    android:textSize="4mm"
+                    android:layout_alignBaseline="@+id/editTextConsTemp"
+                    android:layout_alignBottom="@+id/editTextConsTemp"
+                    android:layout_alignEnd="@+id/textViewPh" />
+
+                <TextView
+                    android:id="@+id/textViewPh"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Ph   de   l'eau : "
+                    android:textSize="4mm"
+                    android:layout_centerVertical="true" />
+
+
+                <TextView
+                    android:id="@+id/textViewNivEau"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Niveau   eau  : "
+                    android:textSize="4mm"
+                    android:layout_below="@+id/editTextConsPH"
+                    android:layout_alignParentStart="true"
+                    android:layout_marginTop="20dp"
+                    android:layout_toStartOf="@+id/editTextConsNiveauEau" />
+
+                <TextView
+                    android:id="@+id/textViewConsignes"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Consignes:"
+                    android:textSize="6mm"
+                    tools:ignore="InOrMmUsage"/>
+
+                <EditText
+                    android:id="@+id/editTextConsTemp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:inputType="numberDecimal"
+                    android:textSize="4mm"
+                    android:background="@android:color/transparent"
+                    android:text="@string/temp_rature"
+                    tools:ignore="LabelFor"
+                    android:layout_above="@+id/editTextConsPH"
+                    android:layout_toEndOf="@+id/textViewTemp"
+                    android:layout_marginBottom="29dp" />
+
+                <EditText
+                    android:id="@+id/editTextConsPH"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="numberDecimal"
+                    android:text="@string/ph"
+                    android:textSize="4mm"
+                    android:background="@android:color/transparent"
+                    tools:ignore="LabelFor"
+                    android:layout_alignBaseline="@+id/textViewPh"
+                    android:layout_alignBottom="@+id/textViewPh"
+                    android:layout_toEndOf="@+id/textViewNivEau" />
+
+                <EditText
+                    android:id="@+id/editTextConsNiveauEau"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:inputType="numberDecimal"
+                    android:textSize="4mm"
+                    android:text="Niveau d'eau"
+                    tools:ignore="LabelFor"
+                    android:background="@android:color/transparent"
+                    android:layout_alignBaseline="@+id/textViewNivEau"
+                    android:layout_alignBottom="@+id/textViewNivEau"
+                    android:layout_toEndOf="@+id/textViewTemp" />
+
+
+            </RelativeLayout>
+
+
+            <TextView
+                android:id="@+id/textViewHistorique"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/historique"
+                android:textSize="6mm"
+                tools:ignore="InOrMmUsage" />
+
+            <TextView
+                android:id="@+id/derniereDistributionEngrais"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/derni_re_distribution_d_engrais"
+                tools:text="derni_re_distribution_d_engrais"/>
+
+            <TextView
+                android:id="@+id/dureeEclairage"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@+id/temp"
+                android:layout_toEndOf="@+id/derniereDistributionEngrais"
+                android:text="@string/dur_e_d_clairage"
+                tools:ignore="ObsoleteLayoutParam"/>
+
+            <TextView
+                android:id="@+id/derniereDistributionNourriture"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="21dp"
+                android:text="@string/derni_re_distribution_de_nourriture"/>
+        </LinearLayout>
+    </ScrollView>
+
+    <RelativeLayout
+        android:layout_width="400dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/relativeLayout"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true">
+
+        <Switch
+            android:id="@+id/SwitchEclairage"
+            android:layout_width="120dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/textViewAppareil"
+            android:layout_marginRight="150dp"
+            android:layout_marginTop="10dp"
+            android:height="0px"
+            android:text="@string/eclairage"/>
+
+        <Switch
+            android:id="@+id/SwitchChauffage"
+            android:layout_width="120dp"
+            android:layout_height="wrap_content"
+            android:layout_alignStart="@+id/SwitchVentilation"
+            android:layout_below="@+id/SwitchNourriture"
+            android:layout_marginRight="150dp"
+            android:layout_marginTop="10dp"
+            android:height="0px"
+            android:text="@string/chauffage"/>
+
+        <Switch
+            android:id="@+id/SwitchEngrais"
+            android:layout_width="120dp"
+            android:layout_height="wrap_content"
+            android:layout_alignStart="@+id/SwitchVentilation"
+            android:layout_below="@+id/SwitchVentilation"
+            android:layout_marginBottom="15dp"
+            android:layout_marginRight="150dp"
+            android:layout_marginTop="10dp"
+            android:height="0px"
+            android:text="@string/engrais"/>
+
+        <Switch
+            android:id="@+id/SwitchFiltration"
+            android:layout_width="120dp"
+            android:layout_height="wrap_content"
+            android:layout_alignStart="@+id/SwitchVentilation"
+            android:layout_below="@+id/SwitchOxygenation"
+            android:layout_marginRight="150dp"
+            android:layout_marginTop="10dp"
+            android:height="0px"
+            android:text="@string/filtration" />
+
+        <Switch
+            android:id="@+id/SwitchVentilation"
+            android:layout_width="120dp"
+            android:layout_height="wrap_content"
+            android:layout_alignStart="@+id/SwitchOxygenation"
+            android:layout_below="@+id/SwitchFiltration"
+            android:layout_marginRight="150dp"
+            android:layout_marginTop="10dp"
+            android:text="@string/ventilation" />
+
+        <Switch
+            android:id="@+id/SwitchNourriture"
+            android:layout_width="120dp"
+            android:layout_height="wrap_content"
+            android:layout_alignStart="@+id/SwitchOxygenation"
+            android:layout_below="@+id/SwitchEclairage"
+            android:layout_marginRight="150dp"
+            android:layout_marginTop="10dp"
+            android:height="0px"
+            android:text="@string/nourriture" />
+
+        <TextView
+            android:id="@+id/textViewAppareil"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="10dp"
+            android:layout_marginLeft="350dp"
+            android:text="@string/appareils"
+            android:textSize="6mm"
+            tools:ignore="InOrMmUsage"
+            android:layout_alignParentTop="true"
+            android:layout_alignEnd="@+id/imageViewEclairage" />
+
+        <TextView
+            android:id="@+id/textViewAquarium"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/aquarium"
+            android:textSize="6mm"
+            tools:ignore="InOrMmUsage"
+            android:layout_below="@+id/SwitchEngrais"
+            android:layout_alignParentStart="true"
+            android:layout_marginTop="10dp" />
+
+        <TextView
+            android:id="@+id/textViewInfosAquarium"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/infos_aquarium"
+            android:textSize="3mm"
+            tools:ignore="InOrMmUsage"
+            android:layout_below="@+id/textViewAquarium"
+            />
+
+        <Switch
+            android:id="@+id/SwitchOxygenation"
+            android:layout_width="120dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/SwitchChauffage"
+            android:layout_marginRight="147dp"
+            android:layout_marginTop="10dp"
+            android:height="0px"
+            android:text="@string/oxyg_ne"
+            android:layout_alignParentStart="true" />
+
+        <ImageView
+            android:id="@+id/imageViewEclairage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/SwitchEclairage"
+            android:layout_centerHorizontal="true"
+            app:srcCompat="@drawable/off"/>
+
+        <ImageView
+            android:id="@+id/imageViewNourriture"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignStart="@+id/imageViewEclairage"
+            android:layout_alignTop="@+id/SwitchNourriture"
+            app:srcCompat="@drawable/off"/>
+
+        <ImageView
+            android:id="@+id/imageViewAquarium"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/textViewInfosAquarium"
+            android:layout_alignStart="@+id/imageViewNourriture"
+            app:srcCompat="@drawable/off"/>
+
+        <ImageView
+            android:id="@+id/imageViewChauffage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignStart="@+id/imageViewNourriture"
+            android:layout_alignTop="@+id/SwitchChauffage"
+            app:srcCompat="@drawable/off"/>
+
+        <ImageView
+            android:id="@+id/imageViewOxygenation"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignEnd="@+id/imageViewNourriture"
+            android:layout_alignTop="@+id/SwitchOxygenation"
+            app:srcCompat="@drawable/off" />
+
+        <ImageView
+            android:id="@+id/imageViewFiltration"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignEnd="@+id/imageViewOxygenation"
+            android:layout_alignTop="@+id/SwitchFiltration"
+            app:srcCompat="@drawable/off" />
+
+        <ImageView
+            android:id="@+id/imageViewVentilation"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignStart="@+id/imageViewFiltration"
+            android:layout_alignTop="@+id/SwitchVentilation"
+            app:srcCompat="@drawable/off" />
+
+        <ImageView
+            android:id="@+id/imageViewEngrais"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignStart="@+id/imageViewVentilation"
+            android:layout_alignTop="@+id/SwitchEngrais"
+            app:srcCompat="@drawable/off" />
+
+
+    </RelativeLayout>
+
+
+
+
+</RelativeLayout>

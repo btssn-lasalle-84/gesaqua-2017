@@ -1,0 +1,243 @@
+/*! \mainpage Page principale du projet GesAqua
+ *
+ * \section section_intro Introduction
+ *
+ *
+ * Assurer le fonctionnement autonome d'un aquarium permettant de recréer artificiellement les conditions initiales de vie du poisson dans son
+environnement naturel. Une gestion à distance sera possible à partir d'une tablette tactile.
+ *
+ * \section section_tdm Table des matières
+ * - \ref page_configuration
+ * - \ref page_install
+ * - \ref todo
+ * - \ref page_changelog
+ * - \ref page_recette
+ * - \ref page_sql
+ * - \ref page_manifest
+ * - \ref page_about
+ * - \ref page_licence
+ *
+ * Dépôt SVN : https://svn.riouxsvn.com/gesaqua
+ */
+
+/*! \page page_configuration Configuration
+ *
+ * \c configuration.sh
+ *
+ * Informations sur le poste de développement
+ *
+ *  - Distribution : Ubuntu 12.04.5 LTS
+ *  - OS : GNU/Linux
+ *  - Noyau : Linux
+ *  - Version : 3.8.0-44-generic
+ *  - Machine : x86_64
+ *  - Processeur : Intel(R) Core(TM) i7-4770 CPU @ 3.40GHz
+ *  - Mémoire RAM : 8129984 kB
+ *
+ * Informations de version sur les outils
+ *
+ * \c version.sh
+ *
+ *  -  Android Studio 2.3
+ *  -  java 1.8.0
+ *  -  SDK Android API 25: Android 7.1.1 (Nougat)
+ *  -  svn, version 1.6.17 (r1128011) 
+ *  -  doxygen 1.7.6.1
+ *  -  bouml Bouml 4.23
+ *
+ *
+ */
+
+/*! \page page_install Manuel d'installation
+ *
+ * Fabrication de l'exécutable :
+ * - \c qmake
+ * - \c make
+ *
+ * Manuel d'installation complet (voir dossier)
+ */
+
+/*! \page page_recette Recette IR
+ *
+ 
+ \b Étudiant 3 : CLOART Audrey\n
+
+- Les données et les alarmes associées au module sont affichées sur la tablette tactile ;
+- La commande des appareils associée au module est possible à partir de la tablette tactile ;
+- Les mesures moyennées sur une heure sont enregistrées périodiquement dans la base de données ;
+- Les nouvelles consignes et seuils min. et max. sont enregistrées dans la base de données ;
+- Les données de l'aquarium (type, mise en eau, dimensions, volume, nombre et taille totale des poissons) sont récupérées à partir de la base de données et affichées avec leurs unités dans l'IHM ;
+- Les prochaines échéances des interventions (analyse de l'eau, intervention, entretien) sont récupérées à partir de la base de données et notifiées si nécessaire ;
+- La sélection des alarmes à surveiller est possible à partir de l'IHM ;
+- Les nouvelles sélections des alarmes à surveiller sont enregistrées dans la base de données
+
+ \b Étudiant 4 : BRESSET Aymeric\n
+
+- Les données et les alarmes associées au module sont affichées sur la tablette tactile ;
+- La commande des appareils associée au module est possible à partir de la tablette tactile ;
+- Le paramétrage du mode automatisé est réalisable ;
+- L'affichage de la durée actuelle d'éclairage en minutes est réelle dans l'IHM ;
+- L'affichage de la dernière distribution de nourriture est visible sur l'écran tactile ;
+- L'affichage de la dernière distribution d'engrais est visible sur l'écran tactile ;
+
+
+ *
+ */
+
+/*! \page page_sql Base de données
+  *
+  
+DROP TABLE appareils;
+DROP TABLE capteurs;
+DROP TABLE parametresVitaux;
+DROP TABLE typeCapteurs;
+DROP TABLE consignes;
+DROP TABLE seuils;
+DROP TABLE aquariums;
+DROP TABLE alarmes;
+DROP TABLE modes;
+
+CREATE TABLE appareils (
+        idAppareil INTEGER PRIMARY KEY NOT NULL ,
+        nom VARCHAR(45) NULL ,
+        etat TINYINT(1) NULL ,
+        horodatage DATETIME );
+
+CREATE TABLE capteurs (
+        idCapteurs INTEGER PRIMARY KEY NOT NULL ,
+        typeCapteurs INTEGER NULL ,
+        nom VARCHAR(45) NULL ,
+        unite VARCHAR(45) NULL ,
+        CONSTRAINT fk_capteurs_1 FOREIGN KEY (typeCapteurs ) REFERENCES typeCapteurs (idtypeCapteurs ) );
+
+CREATE TABLE parametresVitaux (
+        idParametresVitaux INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL ,
+        idCapteur INTEGER NULL ,
+        mesure DOUBLE NULL ,
+        horodatage DATETIME,
+        CONSTRAINT fk_parametresVitaux_1 FOREIGN KEY (idCapteur ) REFERENCES capteurs (idCapteurs ));
+
+CREATE TABLE typeCapteurs (
+        idtypeCapteurs INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL ,
+        typeCapteurs VARCHAR(45) NULL );
+
+CREATE TABLE consignes (
+        temperatureMin DOUBLE NULL ,
+        temperatureMax DOUBLE NULL ,
+        phMin DOUBLE NULL ,
+        phMax DOUBLE NULL ,
+        niveauEauMin DOUBLE NULL ); ;
+
+CREATE TABLE seuils (
+        temperatureMin DOUBLE NULL ,
+        temperatureMax DOUBLE NULL ,
+        phMin DOUBLE NULL ,
+        phMax DOUBLE NULL ,
+        niveauEauMin DOUBLE NULL ,
+        niveauEauMax DOUBLE NULL );
+
+CREATE TABLE aquariums (
+        idAquarium INTEGER PRIMARY KEY NOT NULL ,
+        largeur DOUBLE NULL ,
+        longueur DOUBLE NULL ,
+        hauteur DOUBLE NULL ,
+        volume DOUBLE NULL ,
+        dateMiseEnEau DATETIME,
+        type VARCHAR(50) NOT NULL);
+
+CREATE TABLE alarmes (
+        idAlarme INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL ,
+        type VARCHAR(50) NOT NULL ,
+        mesure DOUBLE NULL ,
+        horodatage DATETIME ,
+        seuilMin DOUBLE NOT NULL ,
+        seuilMax DOUBLE NOT NULL ,
+        description VARCHAR(150) );
+
+CREATE TABLE modes (
+        idMode INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL ,
+        dateDebut DATE ,
+        dateFin DATE ,
+        heureDebut TIME ,
+        heureFin TIME ,
+        mode INTEGER NOT NULL );
+    
+INSERT INTO appareils VALUES(1,'chauffage',0,'2017-03-24 16:31:10');\n
+INSERT INTO appareils VALUES(2,'eclairage',0,'2017-03-24 16:31:20');\n
+INSERT INTO appareils VALUES(3,'nourriture',0,'2017-03-24 16:31:20');\n
+INSERT INTO appareils VALUES(4,'engrais',0,'2017-03-24 16:31:20');\n
+INSERT INTO appareils VALUES(5,'oxygenation',0,'2017-03-24 16:31:20');\n
+INSERT INTO appareils VALUES(6,'filtration',0,'2017-03-24 16:31:20');\n
+INSERT INTO appareils VALUES(7,'ventilation',0,'2017-03-24 16:31:20');\n
+INSERT INTO capteurs VALUES(1,1,'temperature eau','°C');\n
+INSERT INTO capteurs VALUES(2,1,'temperature air','°C');\n
+INSERT INTO capteurs VALUES(3,2,'ph','');\n
+INSERT INTO capteurs VALUES(4,3,'niveau d''eau','cm');\n
+INSERT INTO typeCapteurs VALUES(1,'temperature');\n
+INSERT INTO typeCapteurs VALUES(2,'ph');\n
+INSERT INTO typeCapteurs VALUES(3,'niveau');\n
+INSERT INTO consignes VALUES(24,26,6.8,7.2,34);\n
+INSERT INTO seuils VALUES(23,27,5.5,9,20,40);\n
+INSERT INTO aquariums VALUES(1,40,100,50,200,'2017-04-20 14:20:36','amazonien');\n
+
+  */
+
+/*! \page page_manifest AndroidManifest.xml
+  *
+
+&lt;?xml version="1.0" encoding="utf-8"?&gt;\n
+&lt;manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.cloart.gesaqua"&gt;\n
+    &lt;uses-permission android:name="android.permission.BLUETOOTH" /&gt;\n
+    &lt;uses-permission android:name="android.permission.BLUETOOTH_ADMIN" /&gt;\n
+    &lt;application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"&gt;\n
+        &lt;activity
+            android:name=".MainActivity"
+            android:label="@string/app_name"
+            android:theme="@style/AppTheme.NoActionBar"&gt;\n
+            &lt;intent-filter&gt;\n
+                &lt;action android:name="android.intent.action.MAIN" /&gt;\n
+                &lt;category android:name="android.intent.category.LAUNCHER" /&gt;\n
+            &lt;/intent-filter&gt;\n
+        &lt;/activity&gt;\n
+        &lt;activity android:name=".CalendarViewExample" /&gt;\n
+        &lt;activity android:name=".Parametres" /&gt;\n
+        &lt;receiver
+            android:name=".ReceiverBluetooth"
+            android:enabled="true"
+            android:exported="true"&gt;\n&lt;/receiver&gt;\n
+    &lt;/application&gt;\n
+&lt;/manifest&gt;\n    
+
+  */
+
+/*! \page page_about A propos
+ * \author \a Bresset Aymeric <aymeric.bresset@gmail.com>
+ * \author \a Cloart Audrey <audreycloart@wanadoo.fr>
+ * \version 1.1
+ * \date \b 2017
+ */
+
+/*! \page page_licence Licence GPL
+ *
+ * This program is free software; you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation; either version 2 of the License, or
+ * (at your option) any later version.
+ *
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+ * GNU General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License
+ * along with this program; if not, write to the Free Software
+ * Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA 02111-1307 USA
+ *
+ */
+

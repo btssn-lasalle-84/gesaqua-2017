@@ -1,0 +1,361 @@
+/*! \page page_changelog Changelog
+ *
+\n------------------------------------------------------------------------\n
+r120 | acloart | 2017-06-08 15:27:39 +0200 (jeu. 08 juin 2017) | 1 ligne
+
+ajout de documentation dans CalendarViewExample.java
+\n------------------------------------------------------------------------\n
+r119 | abresset | 2017-06-08 09:43:29 +0200 (jeu. 08 juin 2017) | 1 ligne
+
+modification de la version en version 1.1 et correction d'affichage
+\n------------------------------------------------------------------------\n
+r118 | acloart | 2017-06-08 09:40:44 +0200 (jeu. 08 juin 2017) | 1 ligne
+
+modification de la classe CalendarViewExample
+\n------------------------------------------------------------------------\n
+r117 | abresset | 2017-06-08 09:30:49 +0200 (jeu. 08 juin 2017) | 1 ligne
+
+modifications interface graphique calendrier et blindage des saisies des consignes et rajout d'un logo
+\n------------------------------------------------------------------------\n
+r116 | abresset | 2017-06-07 12:31:39 +0200 (mer. 07 juin 2017) | 1 ligne
+
+modifications interface graphique et correction de bug lors de l'activation du bluetooth
+\n------------------------------------------------------------------------\n
+r115 | acloart | 2017-06-06 12:14:11 +0200 (mar. 06 juin 2017) | 1 ligne
+
+Ajout d'une boîte de dialogue pour la sélection de l'heure de fin
+\n------------------------------------------------------------------------\n
+r114 | abresset | 2017-06-06 11:43:40 +0200 (mar. 06 juin 2017) | 1 ligne
+
+modification IHM mode_auto_view et création de AlarmesIHM.java
+\n------------------------------------------------------------------------\n
+r113 | acloart | 2017-06-06 10:48:02 +0200 (mar. 06 juin 2017) | 1 ligne
+
+Ajout d'une vue mode_auto_view.xml
+\n------------------------------------------------------------------------\n
+r112 | acloart | 2017-06-06 10:46:09 +0200 (mar. 06 juin 2017) | 1 ligne
+
+Ajout d'une boîte de dialogue pour choix de l'heure (mode auto)
+\n------------------------------------------------------------------------\n
+r111 | acloart | 2017-06-02 14:51:17 +0200 (ven. 02 juin 2017) | 1 ligne
+
+Utilisation d'un calendrier pour dates de début et fin du mode automatique
+\n------------------------------------------------------------------------\n
+r109 | acloart | 2017-06-02 11:58:43 +0200 (ven. 02 juin 2017) | 1 ligne
+
+désactivation de l'activation manuelle des appareils en mode automatique
+\n------------------------------------------------------------------------\n
+r108 | abresset | 2017-06-02 10:47:01 +0200 (ven. 02 juin 2017) | 1 ligne
+
+enregistrement des consignes dans la base de donnée et rajout d'un sécurité pour la saisie
+\n------------------------------------------------------------------------\n
+r107 | acloart | 2017-06-02 10:44:24 +0200 (ven. 02 juin 2017) | 1 ligne
+
+ajout de la fonction calculerDureeEclairage
+\n------------------------------------------------------------------------\n
+r106 | abresset | 2017-06-02 09:18:56 +0200 (ven. 02 juin 2017) | 1 ligne
+
+récupération des seuils dans la base de données
+\n------------------------------------------------------------------------\n
+r105 | abresset | 2017-06-01 17:51:02 +0200 (jeu. 01 juin 2017) | 1 ligne
+
+trame de seuils modifiée, modification de l'IHM pour les consignes
+\n------------------------------------------------------------------------\n
+r104 | tvaira | 2017-06-01 14:26:39 +0200 (jeu. 01 juin 2017) | 1 ligne
+
+Mise à jour simulateur
+\n------------------------------------------------------------------------\n
+r103 | abresset | 2017-05-31 11:17:49 +0200 (mer. 31 mai 2017) | 1 ligne
+
+mise a jour de la base de donnée lors de la fin de l'activité Paramétres et création d'une trame de seuils pour modifier les valeurs dans le simulateur
+\n------------------------------------------------------------------------\n
+r102 | acloart | 2017-05-19 17:38:02 +0200 (ven. 19 mai 2017) | 1 ligne
+
+Ajout de la gestion de la dernière distribution d'engrais et de nourriture et affichage dans l'IHM
+\n------------------------------------------------------------------------\n
+r101 | abresset | 2017-05-19 10:51:49 +0200 (ven. 19 mai 2017) | 2 lignes
+
+Ajout de documentation dans le code au niveau des methodes concernées
+
+\n------------------------------------------------------------------------\n
+r100 | tvaira | 2017-05-19 06:59:47 +0200 (ven. 19 mai 2017) | 1 ligne
+
+Mise à jour commentaires Doxygen
+\n------------------------------------------------------------------------\n
+r99 | tvaira | 2017-05-18 22:06:22 +0200 (jeu. 18 mai 2017) | 1 ligne
+
+Mise à jour documentation Doxygen
+\n------------------------------------------------------------------------\n
+r98 | abresset | 2017-05-18 17:32:49 +0200 (jeu. 18 mai 2017) | 2 lignes
+
+Ajout de documentation dans le code
+
+\n------------------------------------------------------------------------\n
+r97 | acloart | 2017-05-18 11:54:44 +0200 (jeu. 18 mai 2017) | 1 ligne
+
+mise en place de la communication bluetooth avec la partie EC et reception des trames envoyées par la partie EC
+\n------------------------------------------------------------------------\n
+r96 | acloart | 2017-05-17 12:08:14 +0200 (mer. 17 mai 2017) | 1 ligne
+
+Gestion de la dernière distribution d'engrais
+\n------------------------------------------------------------------------\n
+r95 | acloart | 2017-05-17 09:05:27 +0200 (mer. 17 mai 2017) | 1 ligne
+
+Ajout des images on/off  pour les switch des appareils
+\n------------------------------------------------------------------------\n
+r94 | acloart | 2017-05-17 08:46:44 +0200 (mer. 17 mai 2017) | 1 ligne
+
+Ajout des images on/off  pour les switch des appareils
+\n------------------------------------------------------------------------\n
+r91 | tvaira | 2017-05-15 12:27:37 +0200 (lun. 15 mai 2017) | 1 ligne
+
+Ajout détection connexion inactive
+\n------------------------------------------------------------------------\n
+r90 | acloart | 2017-05-15 08:37:33 +0200 (lun. 15 mai 2017) | 1 ligne
+
+Correction noms méthodes
+\n------------------------------------------------------------------------\n
+r89 | tvaira | 2017-05-15 07:56:54 +0200 (lun. 15 mai 2017) | 1 ligne
+
+Ajout commentaires Thread Reception
+\n------------------------------------------------------------------------\n
+r88 | tvaira | 2017-05-14 19:11:31 +0200 (dim. 14 mai 2017) | 1 ligne
+
+Modification MainActivity et boucle de connexion pour la socket
+\n------------------------------------------------------------------------\n
+r81 | acloart | 2017-05-13 22:04:57 +0200 (sam. 13 mai 2017) | 1 ligne
+
+Modification etat connexion IHM
+\n------------------------------------------------------------------------\n
+r80 | abresset | 2017-05-13 20:44:36 +0200 (sam. 13 mai 2017) | 1 ligne
+
+Modification IHM
+\n------------------------------------------------------------------------\n
+r79 | tvaira | 2017-05-12 22:25:50 +0200 (ven. 12 mai 2017) | 1 ligne
+
+Réorganisation du code dans la classe MainActivity
+\n------------------------------------------------------------------------\n
+r78 | acloart | 2017-05-12 18:22:47 +0200 (ven. 12 mai 2017) | 1 ligne
+
+modification simulateur aquarium
+\n------------------------------------------------------------------------\n
+r77 | abresset | 2017-05-12 18:18:34 +0200 (ven. 12 mai 2017) | 2 lignes
+
+Simplification du code et mise à jour de l'état des appareils dans la base de données
+
+\n------------------------------------------------------------------------\n
+r76 | abresset | 2017-05-12 15:08:02 +0200 (ven. 12 mai 2017) | 2 lignes
+
+Simplification du code et modification du nom des fonctions
+
+\n------------------------------------------------------------------------\n
+r75 | acloart | 2017-05-04 17:50:24 +0200 (jeu. 04 mai 2017) | 1 ligne
+
+Ajout des tuples dans la table seuils via réception des trames par MainActivity
+\n------------------------------------------------------------------------\n
+r74 | abresset | 2017-05-04 15:48:39 +0200 (jeu. 04 mai 2017) | 2 lignes
+
+Simplification du code ( optimisation de la lisibilité) modification IHM et correction des bugs de la revue
+
+\n------------------------------------------------------------------------\n
+r73 | tvaira | 2017-04-29 10:53:42 +0200 (sam. 29 avril 2017) | 1 ligne
+
+Ajout droit lecture sur la BD
+\n------------------------------------------------------------------------\n
+r71 | acloart | 2017-04-28 16:51:27 +0200 (ven. 28 avril 2017) | 1 ligne
+
+Insertion de tuples dans la table parametresVitaux
+\n------------------------------------------------------------------------\n
+r70 | abresset | 2017-04-28 12:29:07 +0200 (ven. 28 avril 2017) | 2 lignes
+
+modification et simplification du filtrage de la trame et commentaire des fonctions
+
+\n------------------------------------------------------------------------\n
+r69 | abresset | 2017-04-27 14:17:21 +0200 (jeu. 27 avril 2017) | 1 ligne
+
+rajout d'un layout pour les switch de l'activité principale et fin de la traduction de la trame $s avec le transfert des données concernées dans l'activité paramétres
+\n------------------------------------------------------------------------\n
+r68 | abresset | 2017-04-26 12:33:20 +0200 (mer. 26 avril 2017) | 1 ligne
+
+Ajout des textView pour affichage de la dernière distribution d'engrais, de nourriture et durée d'éclairage
+\n------------------------------------------------------------------------\n
+r67 | acloart | 2017-04-22 17:12:45 +0200 (sam. 22 avril 2017) | 1 ligne
+
+essai ajout de contenu dans la base de données
+\n------------------------------------------------------------------------\n
+r66 | abresset | 2017-04-21 16:07:29 +0200 (ven. 21 avril 2017) | 1 ligne
+
+rajout de la saisie des parametres pour le niveau d'eau et le pH et récupération des données dans la trame
+\n------------------------------------------------------------------------\n
+r65 | acloart | 2017-04-21 15:25:04 +0200 (ven. 21 avril 2017) | 1 ligne
+
+Ajout des classes Mode et Modes
+\n------------------------------------------------------------------------\n
+r64 | acloart | 2017-04-21 12:47:22 +0200 (ven. 21 avril 2017) | 1 ligne
+
+Ajout de la classe Alarmes
+\n------------------------------------------------------------------------\n
+r63 | abresset | 2017-04-20 15:19:15 +0200 (jeu. 20 avril 2017) | 1 ligne
+
+rajout d'une fonction dans l'activité pour afficher une seule trame dans un toast
+\n------------------------------------------------------------------------\n
+r62 | acloart | 2017-04-20 14:28:51 +0200 (jeu. 20 avril 2017) | 1 ligne
+
+Ajout de la classe Aquariums et création de la table aquariums
+\n------------------------------------------------------------------------\n
+r61 | acloart | 2017-04-20 13:49:09 +0200 (jeu. 20 avril 2017) | 1 ligne
+
+Ajout des classes Seuil etSeuils, création de la table seuils dans la base de données
+\n------------------------------------------------------------------------\n
+r60 | acloart | 2017-04-20 12:03:28 +0200 (jeu. 20 avril 2017) | 1 ligne
+
+Ajout des classes Consigne et Consignes, création de la table consignes dans la base de données
+\n------------------------------------------------------------------------\n
+r59 | acloart | 2017-04-07 17:41:43 +0200 (ven. 07 avril 2017) | 1 ligne
+
+Affichage de trames dans l'IHM
+\n------------------------------------------------------------------------\n
+r58 | abresset | 2017-04-07 15:57:32 +0200 (ven. 07 avril 2017) | 1 ligne
+
+Modification des TextView et rajout d'une modification de la température lors d'un changement d'activité dans la fonction onResume
+\n------------------------------------------------------------------------\n
+r57 | acloart | 2017-04-06 17:55:37 +0200 (jeu. 06 avril 2017) | 1 ligne
+
+Ajout de la classe TReception
+\n------------------------------------------------------------------------\n
+r56 | abresset | 2017-04-06 17:53:20 +0200 (jeu. 06 avril 2017) | 1 ligne
+
+résolution de bug qui empechait les Switch de s'activer lorsqu'on les swipe. Commentaire des fonctionnalités du dernier commit (  transfert de données d'un intent à l'autre)
+\n------------------------------------------------------------------------\n
+r55 | abresset | 2017-04-06 14:55:18 +0200 (jeu. 06 avril 2017) | 1 ligne
+
+modification de l'intent paramétre qui reprend les valeurs tempMin et tempMax les affiche dans un EditText. Si on valide, enregistre les valeurs des EditText dans les valeurs de tempMin et Tempmax de l'activité principale
+\n------------------------------------------------------------------------\n
+r54 | acloart | 2017-04-05 12:32:19 +0200 (mer. 05 avril 2017) | 1 ligne
+
+Ajout classe PeripheriqueBluetooth et définition de la classe Poisson
+\n------------------------------------------------------------------------\n
+r51 | acloart | 2017-03-31 17:09:45 +0200 (ven. 31 mars 2017) | 2 lignes
+
+Ajout d'une classe BroadastReceiver appelée ReceiverBluetooth et activation du bluetooth de la tablette via l'application 
+
+\n------------------------------------------------------------------------\n
+r50 | abresset | 2017-03-31 15:22:02 +0200 (ven. 31 mars 2017) | 2 lignes
+
+Modification de l'IHM avec le rajout d'une instance Paramétre qui permettra de regler certaines limites pour les paramétres vitaux et rajout de divers switch pour la page d'accueil.
+
+\n------------------------------------------------------------------------\n
+r49 | abresset | 2017-03-30 17:13:41 +0200 (jeu. 30 mars 2017) | 2 lignes
+
+Ajout de bouttons pour une future utilisation pour activer ou désactiver manuellement les différents appareils (eclairage, nourriture, chauffage...)
+
+\n------------------------------------------------------------------------\n
+r48 | acloart | 2017-03-30 14:27:51 +0200 (jeu. 30 mars 2017) | 2 lignes
+
+Ajout activité CalendarViewExample, affichage calendrier (de ce mois-ci)
+
+\n------------------------------------------------------------------------\n
+r47 | abresset | 2017-03-29 10:59:36 +0200 (mer. 29 mars 2017) | 1 ligne
+
+mise a jour de la documentation, rajout d'un boutton retour pour la 2eme page IHM et diverses corrections graphiques
+\n------------------------------------------------------------------------\n
+r45 | acloart | 2017-03-24 16:46:36 +0100 (ven. 24 mars 2017) | 2 lignes
+
+Mise à jour de la documentation
+
+\n------------------------------------------------------------------------\n
+r44 | acloart | 2017-03-24 16:07:10 +0100 (ven. 24 mars 2017) | 2 lignes
+
+Ajout de la classe Poisson
+
+\n------------------------------------------------------------------------\n
+r43 | acloart | 2017-03-24 16:02:57 +0100 (ven. 24 mars 2017) | 2 lignes
+
+Affichage du contenu de la table "appareils"
+
+\n------------------------------------------------------------------------\n
+r42 | acloart | 2017-03-23 17:50:34 +0100 (jeu. 23 mars 2017) | 2 lignes
+
+Début d'implémentation de la classe Environnement.java
+
+\n------------------------------------------------------------------------\n
+r41 | abresset | 2017-03-23 17:01:03 +0100 (jeu. 23 mars 2017) | 1 ligne
+
+Ajout d'un onglet Paramétres et Environnement dans le menu.
+\n------------------------------------------------------------------------\n
+r40 | acloart | 2017-03-23 16:59:41 +0100 (jeu. 23 mars 2017) | 2 lignes
+
+Ajout du layout activity_environnement et de la classe Environnement.java
+
+\n------------------------------------------------------------------------\n
+r39 | acloart | 2017-03-23 16:46:20 +0100 (jeu. 23 mars 2017) | 2 lignes
+
+Affichage nombre de tuples de la table appareils dans MainActivity
+
+\n------------------------------------------------------------------------\n
+r38 | acloart | 2017-03-23 14:40:56 +0100 (jeu. 23 mars 2017) | 2 lignes
+
+Ajout de la classe TypeCapteurs
+
+\n------------------------------------------------------------------------\n
+r37 | abresset | 2017-03-23 14:39:18 +0100 (jeu. 23 mars 2017) | 1 ligne
+
+Ajout d'un message d'alerte et modification du switch pour un rajout de message de confirmation
+\n------------------------------------------------------------------------\n
+r36 | acloart | 2017-03-22 12:32:47 +0100 (mer. 22 mars 2017) | 2 lignes
+
+Ajout de la classe TypeCapteur
+
+\n------------------------------------------------------------------------\n
+r35 | acloart | 2017-03-22 12:25:46 +0100 (mer. 22 mars 2017) | 1 ligne
+
+Ajout des classes Capteurs, ParametreVital et ParametresVitaux
+\n------------------------------------------------------------------------\n
+r34 | abresset | 2017-03-22 12:09:05 +0100 (mer. 22 mars 2017) | 1 ligne
+
+Ajout d'un message d'alerte et modification de la checkbox pour un rajout de message de confirmation
+\n------------------------------------------------------------------------\n
+r33 | acloart | 2017-03-22 10:32:16 +0100 (mer. 22 mars 2017) | 1 ligne
+
+Ajout des classes GesAquaBDD, GesAquaSQLite et Capteur
+\n------------------------------------------------------------------------\n
+r32 | acloart | 2017-03-17 17:16:24 +0100 (ven. 17 mars 2017) | 1 ligne
+
+Mise à jour de la documentation et du diagramme UML sur la base de données
+\n------------------------------------------------------------------------\n
+r29 | abresset | 2017-03-16 17:51:18 +0100 (jeu. 16 mars 2017) | 2 lignes
+
+ajout MainActivity.java
+
+\n------------------------------------------------------------------------\n
+r28 | acloart | 2017-03-16 17:47:25 +0100 (jeu. 16 mars 2017) | 1 ligne
+
+ajout et implémentation de la classe Appareils.java
+\n------------------------------------------------------------------------\n
+r27 | abresset | 2017-03-16 17:41:09 +0100 (jeu. 16 mars 2017) | 1 ligne
+
+ajout d'un switch qui affiche le mode auto avec un activé/désactivé.
+\n------------------------------------------------------------------------\n
+r26 | abresset | 2017-03-16 15:57:50 +0100 (jeu. 16 mars 2017) | 1 ligne
+
+ajout de la classe ParamétresVitaux et ajout d'une checkBox et des messages lors de l'activation/désactivation
+\n------------------------------------------------------------------------\n
+r25 | abresset | 2017-03-16 11:24:48 +0100 (jeu. 16 mars 2017) | 1 ligne
+
+ajout de la classe Aquarium
+\n------------------------------------------------------------------------\n
+r23 | abresset | 2017-03-15 10:57:45 +0100 (mer. 15 mars 2017) | 1 ligne
+
+ajout d'un spinner
+\n------------------------------------------------------------------------\n
+r21 | tvaira | 2017-03-10 16:40:21 +0100 (ven. 10 mars 2017) | 1 ligne
+
+Fichiers XML d'Android Studio
+\n------------------------------------------------------------------------\n
+r20 | tvaira | 2017-03-10 16:34:38 +0100 (ven. 10 mars 2017) | 1 ligne
+
+Ajout du dossier GesAqua pour Android Studio
+
+\n------------------------------------------------------------------------\n
+*
+*/
