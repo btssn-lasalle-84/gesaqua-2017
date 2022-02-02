@@ -20,6 +20,8 @@ Permettre une gestion à distance à partir d'une tablette tactile sous Android.
 
 - [dossier-gesaqua-ir-2017.pdf](dossier-gesaqua-ir-2017.pdf)
 
+Documentation du code : https://btssn-lasalle-84.github.io/gesaqua-2017/
+
 ## Vidéo
 
 Lien : https://www.youtube.com/watch?v=U7-VFr3dmA4

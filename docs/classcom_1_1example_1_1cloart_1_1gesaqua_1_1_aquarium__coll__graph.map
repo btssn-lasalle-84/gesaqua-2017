@@ -1,0 +1,4 @@
+<map id="G" name="G">
+<area shape="rect" id="node4" href="$classcom_1_1example_1_1cloart_1_1gesaqua_1_1_ges_aqua_b_d_d.html" title="{com.example.cloart.gesaqua.GesAquaBDD\n|&#45; bdd\l&#45; gesAquaSQLite\l|+ GesAquaBDD()\l+ open()\l+ close()\l+ getBDD()\l}" alt="" coords="121,419,396,573"/>
+<area shape="rect" id="node6" href="$classcom_1_1example_1_1cloart_1_1gesaqua_1_1_ges_aqua_s_q_lite.html" title="classe qui hérite de SQLiteOpenHelper pour définir l’ensemble des tables de la base de données qui se..." alt="" coords="155,6,440,351"/>
+</map>
